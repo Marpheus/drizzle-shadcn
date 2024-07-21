@@ -9,20 +9,7 @@ async function Images() {
   const images = await getMyImages();
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4">
-      {[
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-        ...images,
-      ].map((image) => (
+      {images.map((image) => (
         <div key={image.id} className="flex h-48 w-48 flex-col">
           <Link href={`/img/${image.id}`}>
             {/*// this cost money https://vercel.com/docs/image-optimization/limits-and-pricing*/}
